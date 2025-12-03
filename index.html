@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Royal Word Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<canvas id="confettiCanvas"></canvas>
+
+<!-- Floating Gold Dust -->
+<div class="particles"></div>
+
+<!-- Game Card -->
+<div class="game-card">
+
+    <!-- Crown Logo -->
+    <svg class="crown" width="110" height="110" viewBox="0 0 512 512">
+  <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#ffe9b3"/>
+    <stop offset="50%" stop-color="#f2c873"/>
+    <stop offset="100%" stop-color="#cfa24a"/>
+  </linearGradient>
+  <path fill="url(#goldGradient)" d="
+      M256 80
+      L330 200
+      L470 160
+      L400 330
+      L440 440
+      L256 380
+      L72 440
+      L112 330
+      L42 160
+      L182 200
+      Z
+  " 
+  stroke="#f7d887" stroke-width="10" stroke-linejoin="round"/>
+</svg>
+
+    
+
+    <h1>WORD QUEST</h1>
+
+    <div id="wordDisplay">_ _ _ _</div>
+    <div id="hint">Hint will appear here</div>
+
+   <div class="input-section">
+    <input type="text" id="letterInput" maxlength="1" placeholder="Enter the alphabet">
+    <button onclick="guessLetter()">Guess</button>
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

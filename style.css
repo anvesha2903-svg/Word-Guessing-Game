@@ -1,0 +1,153 @@
+/* ---------------- Global Theme ---------------- */
+body {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    background: black;
+    color: #f5d78c;
+    overflow: hidden;
+}
+.input-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ---------------- Floating Gold Dust ---------------- */
+.particles {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #ffe9b3, #c19b3b);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: floatUp 8s linear infinite;
+    filter: blur(1px);
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(110vh) scale(0.4);
+        opacity: 0.2;
+    }
+    50% { opacity: 0.8; }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ---------------- Card ---------------- */
+/* ---------------- Card (Bigger Version) ---------------- */
+.game-card {
+    width: 520px;           /* Increased width */
+    padding: 50px;          /* More inner space */
+    margin: 80px auto;
+    background: rgba(0,0,0,0.65);
+    border-radius: 28px;    /* Slightly rounder edges */
+    position: relative;
+    animation: glow 3s infinite linear;
+    border: 2px solid transparent;
+}
+
+
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #b89246; }
+    50% { box-shadow: 0 0 25px #eac676; }
+    100% { box-shadow: 0 0 10px #b89246; }
+}
+
+/* ---------------- Crown Logo ---------------- */
+.crown {
+    display: block;
+    width: 75px;
+    margin: 0 auto 20px;
+}
+
+/* ---------------- Text Styling ---------------- */
+h1 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffe9b3;
+    margin-top: 0;
+}
+
+#wordDisplay {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 8px;
+    margin: 20px 0;
+}
+
+#hint {
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 25px;
+}
+
+/* ---------------- Input ---------------- */
+.input-section input {
+    width: 250px;           /* long enough for full placeholder */
+    height: 60px;           /* luxurious height */
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 24px;        /* readable size */
+    border-radius: 16px;
+    border: 3px solid #c6a559;
+    background: black;
+    color: gold;
+    outline: none;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.input-section input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px #ffd700;
+}
+
+
+
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 200;
+}
+
+/* ---------------- Button ---------------- */
+button {
+    display: block;
+    width: 120px;
+    margin: 20px auto 0;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: #c9a24f;
+    color: black;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #d6b354;
+}
+
+button:hover {
+    box-shadow: 0 0 18px gold, 0 0 28px gold inset;
+    transform: scale(1.05);
+}
